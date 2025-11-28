@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+
+  <!-- CSS inside <style> so everything is in one file -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f4f4f4;
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e3a8a;
+      color: #fff;
+      padding: 10px 20px;
+    }
+
+    /* Layout: sidebar + content */
+    .wrapper {
+      display: flex;
+      min-height: calc(100vh - 60px);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #111827;
+      color: #e5e7eb;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+
+    /* Main content */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    /* Cards */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 6px;
+      flex: 1 1 200px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive: stack for mobile */
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <h1>Student Dashboard</h1>
+    <span class="user">Hello, Student</span>
+  </header>
+
+  <!-- Sidebar + main content -->
+  <div class="wrapper">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>Courses</li>
+        <li>Marks</li>
+        <li>Notifications</li>
+        <li>Profile</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section class="cards">
+        <div class="card">
+          <h3>Courses</h3>
+          <p>3 active courses</p>
+        </div>
+        <div class="card">
+          <h3>Marks</h3>
+          <p>Latest exam: 82%</p>
+        </div>
+        <div class="card">
+          <h3>Notifications</h3>
+          <p>2 new messages</p>
+        </div>
+        <div class="card">
+          <h3>Recent Activity</h3>
+          <p>Last login: Today</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
